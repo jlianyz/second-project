@@ -30,6 +30,26 @@
         </div>
         <div class="type"></div>
       </div>
+      <p>Ready to play now? Choose your level!</p>
+          </div>
+            <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
+      <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
+    </div>
+    </div>
+    <div id="main">
+      <div class="pokemon-name"></div>
+      <img class="pokemon-image">
+      <p id="hint"></p>
+      <form id="answer">
+        <label name = "userAns">Enter your answer</label>
+        <input type="text" name="userAns" id="userAns"><br>
+        <input type="submit" id="submit">
+        </form><br>
+      <div class="score" id="score">Score:</div>
+      <div id="result"></div>
+      <button id="next">Skip</button>
+      <button id="reset">Play again</button>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script src="scripts/jquery.js"></script>
     <script src="scripts/script.js"></script>
