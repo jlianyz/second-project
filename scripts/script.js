@@ -37,3 +37,19 @@ function getPokemonData() {
     pokemonImage.src = "";
   });
 }  
+
+function learn() {
+  //learn about pokemon by entering ID from 1 to 150
+    axios.get(apiUrl + enterNo.value)
+    .then(function (response) {
+      pname.innerHTML = response.data.forms[0].name;
+      image.src = response.data.sprites.front_default;
+      backImage.src = response.data.sprites.back_default;
+      type.innerHTML = "Type: " + response.data.types[0].type.name;
+});
+};
+ $("#learnMore").click(function(n) {
+    n.preventDefault();
+    $("#showPokemon").show();
+    learn()
+ });
