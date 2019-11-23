@@ -60,9 +60,32 @@ $("#next").on('click', function(next) {
   $("#result").empty();
 });
 
+//when user chooses to reset game
+$("#reset").on('click', function(e) {
+  e.preventDefault();
+  $("#main").hide();
+  $('#pokedex').show();
+  $(".levels").show();
+  $(".pokemon-image").hide();
+  $("#hint").hide();
+  reset();
+  $(".pokemon-name").hide();
+});
 function reset(){
   $("#showPokemon").hide();
   counter = 0;
   $("#details").val('')
         $("#score").html("score: " + counter);
   }
+  
+//when user clicks on easy button
+document.getElementById("easy").addEventListener("click", function() {
+  difficultyLevel = "easy";
+  $("#main").show();
+  getPokemonData();//pull api data
+  $('#pokedex').hide();
+  $(".pokemon-image").css("filter", "");
+  $(".levels").hide();//hide levels buttons
+  $(".bounce").hide();//remove pokemon animation
+  $('#main').css("height","450px");//increase box size to accomodate pokemon image
+});
