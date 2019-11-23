@@ -101,3 +101,17 @@ document.getElementById("hard").addEventListener("click", function() {
   $(".bounce").hide();//remove pokemon animation
   $('#main').css("height","450px");//increase box size to 
 });
+
+//when user clicks submit
+$("#answer").submit(function(e) {
+  e.preventDefault();
+    var userAns = $("#userAns").val();
+    $(".pokemon-image").css("filter", "");
+    if(userAns.length === 0) { //user left inpupt box blank
+      $("#result").html("Please enter an answer").show();
+      $("#result").css("color","red");
+       if (difficultyLevel == "hard") {
+         $(".pokemon-image").css("filter", "brightness(0)");
+      } else if (difficultyLevel == "easy") {
+        $(".pokemon-image").css("filter", "");
+      };
