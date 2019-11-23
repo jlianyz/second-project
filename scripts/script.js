@@ -131,4 +131,20 @@ $("#answer").submit(function(e) {
           $(".pokemon-image").css("filter", "");
         };
       }; 
-    } 
+    } else if(userAns.toLowerCase() != pokemonName.innerText && userAns.length > 0) {
+      $(".pokemon-name").css("display","block");
+      $("#result").html("The pokemon name is " + pokemonName.innerHTML).show();
+      $("#result").css("color","blue")
+      setTimeout(fade_out, 2000);
+      function fade_out() {
+        $("#result").fadeOut().empty();
+        $("#userAns").val('');
+      getPokemonData();
+      if (difficultyLevel == "hard") {
+        $(".pokemon-image").css("filter", "brightness(0)");
+      } else if (difficultyLevel == "easy") {
+        $(".pokemon-image").css("filter", "");
+      };
+    }
+  };
+});
