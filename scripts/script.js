@@ -53,3 +53,9 @@ function learn() {
     $("#showPokemon").show();
     learn()
  });
+
+//when user skips question
+$("#next").on('click', function(next) {
+  getPokemonData();
+  $("#result").empty();
+});
