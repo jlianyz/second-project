@@ -110,8 +110,25 @@ $("#answer").submit(function(e) {
     if(userAns.length === 0) { //user left inpupt box blank
       $("#result").html("Please enter an answer").show();
       $("#result").css("color","red");
-       if (difficultyLevel == "hard") {
-         $(".pokemon-image").css("filter", "brightness(0)");
+      if (difficultyLevel == "hard") {
+        $(".pokemon-image").css("filter", "brightness(0)");
       } else if (difficultyLevel == "easy") {
         $(".pokemon-image").css("filter", "");
       };
+    } else if(userAns.toLowerCase() === pokemonName.innerText) {
+      $("#result").html("congrats").show();
+      counter += 1
+      $("#score").html("score: " + counter);
+      $("#result").css("color","green");
+      setTimeout(fade_out, 2000);
+      function fade_out() {
+        $("#result").fadeOut().empty();
+        $("#userAns").val('');
+        getPokemonData();
+        if (difficultyLevel == "hard") {
+          $(".pokemon-image").css("filter", "brightness(0)");
+        } else if (difficultyLevel == "easy") {
+          $(".pokemon-image").css("filter", "");
+        };
+      }; 
+    } 
