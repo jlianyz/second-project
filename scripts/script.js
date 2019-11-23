@@ -17,6 +17,27 @@ var counter = 0;
 var learnMore = document.getElementById("#showPokemon")
 var difficultyLevel;
 
+//pokemon animation
+function bounce(bouncingCount, speed) {
+  var top = 200;
+	var speedRatio = speed / top;
+	var heightRatio = top / bouncingCount;
+
+	for (var i = 1; i <= bouncingCount; i++) {
+		$('.bounce').animate({
+			'bottom' : top
+		}, speed);
+		$('.bounce').animate({
+			'bottom' : 0
+    });
+		top = top - (heightRatio);
+	}
+}
+
+$(".bounce").mouseover(function() {
+	bounce(10, 500);
+});
+
 //get api data for image and hint
 function getPokemonData() {
   //var input = Math.ceil(Math.random() * 151 + 1);
