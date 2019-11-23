@@ -89,3 +89,15 @@ document.getElementById("easy").addEventListener("click", function() {
   $(".bounce").hide();//remove pokemon animation
   $('#main').css("height","450px");//increase box size to accomodate pokemon image
 });
+
+//when user clicks on hard button
+document.getElementById("hard").addEventListener("click", function() {
+  difficultyLevel = "hard";
+  $("#main").show();
+  $(".pokemon-image").css("filter", "brightness(0)");
+  getPokemonData();//pull api data
+    $('#pokedex').hide();
+  $(".levels").hide();//hide levels buttons
+  $(".bounce").hide();//remove pokemon animation
+  $('#main').css("height","450px");//increase box size to 
+});
