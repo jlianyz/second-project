@@ -59,3 +59,10 @@ $("#next").on('click', function(next) {
   getPokemonData();
   $("#result").empty();
 });
+
+function reset(){
+  $("#showPokemon").hide();
+  counter = 0;
+  $("#details").val('')
+        $("#score").html("score: " + counter);
+  }
