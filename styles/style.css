@@ -1,0 +1,34 @@
+body {
+  background-image: url("images/pokeball-bg.png");
+}
+#level {
+  display: flex;
+  justify-content: space-around;
+}
+#learnMore {
+  color:white;
+  background-color:green;
+  border-radius:10px;
+  text-align:center;
+  width:150px;
+  height:40px;
+  font-family: 'Fredoka One', sans-serif;
+  font-weight:bolder;
+  letter-spacing:2px;
+}
+#showPokemon {
+  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+  border:10px solid black;
+  margin:10px auto;
+  width:80%;
+  font-weight:bolder;
+  font-size:34px;
+  padding:20px;
+  display:none;
+}
+h1 {
+  background-color:white;
+  font-family:'Monoton', cursive;
+  text-align:center;
+  padding:10px 0;
+}
