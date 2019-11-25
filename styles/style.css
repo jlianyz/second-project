@@ -105,7 +105,7 @@ input[type=number] {
 #charmander {
 	position: absolute;
 	top:60px;
-	left: 70%;
+	left: 75%;
 	margin-left: -75px;
   height:50px;
   width: 45px;
@@ -113,7 +113,7 @@ input[type=number] {
 #squirtle {
 	position: absolute;
 	top:60px;
-	left: 90%;
+	left: 95%;
 	margin-left: -75px;
   height:50px;
   width: 45px;
@@ -121,5 +121,9 @@ input[type=number] {
 @media only screen and (max-width: 600px) {
   .bounce {
     display:none;
+  }
+@media only screen and (max-width: 800px) {
+  .logo {
+  width: 150px;
   }
 }
