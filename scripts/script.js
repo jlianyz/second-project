@@ -19,23 +19,23 @@ var difficultyLevel;
 
 //pokemon animation
 function bounce(bouncingCount, speed) {
-  var top = 200;
-	var speedRatio = speed / top;
-	var heightRatio = top / bouncingCount;
+  var bottom = 20;
+	var speedRatio = speed / bottom;
+	var heightRatio = bottom / bouncingCount;
 
 	for (var i = 1; i <= bouncingCount; i++) {
 		$('.bounce').animate({
-			'bottom' : top
+			'top' : bottom
 		}, speed);
 		$('.bounce').animate({
-			'bottom' : 0
+			'top' : 60
     });
-		top = top - (heightRatio);
+		bottom = bottom - (heightRatio);
 	}
 }
 
 $(".bounce").mouseover(function() {
-	bounce(10, 500);
+	bounce(10, 300);
 });
 
 //get api data for image and hint
@@ -107,7 +107,6 @@ document.getElementById("easy").addEventListener("click", function() {
   $('#pokedex').hide();
   $(".pokemon-image").css("filter", "");
   $(".levels").hide();//hide levels buttons
-  $(".bounce").hide();//remove pokemon animation
   $('#main').css("height","450px");//increase box size to accomodate pokemon image
 });
 
@@ -119,7 +118,6 @@ document.getElementById("hard").addEventListener("click", function() {
   getPokemonData();//pull api data
     $('#pokedex').hide();
   $(".levels").hide();//hide levels buttons
-  $(".bounce").hide();//remove pokemon animation
   $('#main').css("height","450px");//increase box size to 
 });
 
