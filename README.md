@@ -84,8 +84,24 @@ It was found that for Edge, when the input value for submit was not defined, the
 ***
 
 ### Deployment
+I deployed the site with the following steps:
+1. Go to this repository's github [link](https://github.com/jlianyz/second-project)
+2. Click on settings --> Github Pages
+3. Select "none" for the Source and then select "master branch"
+4. Refresh the page and the site is now deployed.
 
+For my IDE, I used AWS Cloud9. My file architecture is as follows:
+* A separate folder for the CSS file
+* A separate folder for the js files (Javascript and jquery)
+* A separate folder for images
+* A separate folder for Wireframes
+* index.html file
 
+To deploy the page locally:
+1.	Go to the github [link](https://github.com/jlianyz/second-project)
+2.	Click on the Clone/download button and copy the URL 
+3.	Change the working directory in your local IDE’s Git Bash to the location where you want to store the cloned directory
+4.	Type "git clone https://github.com/username/repository" in the CDL 
 ***
 ### Credits
 **Images**
@@ -102,7 +118,7 @@ The fonts were taken from [Google fonts](https://fonts.google.com/)
 
 **Bouncing Pokemon animation**
 
-I adapted the animation code from [here]((https://phppot.com/demo/bouncing-ball-animation-using-jquery/))
+I adapted the animation code from [here](https://phppot.com/demo/bouncing-ball-animation-using-jquery/)
 
 **Ultraball Favicon**
 
