@@ -71,9 +71,17 @@ function learn() {
 };
  $("#learnMore").click(function(n) {
     n.preventDefault();
-    $("#showPokemon").show();
-    learn()
+    var pokeNo = $("#details").val();
+    if(pokeNo < 1 || pokeNo > 150) { //user entered number outside range
+      $("#showPokemon").show();
+    }
+    else {
+      $("#showPokemon").show();
+      $(".errorMsg").hide();
+      learn();
+    }
  });
+   
 
 //when user skips question
 $("#next").on('click', function(next) {

@@ -19,26 +19,32 @@
     <br>
     <h1>Guess the pokemon</h1>
     <div id="starting">
-    <div id ="pokedex">
-      <p>Brush up on your Pokemon knowledge before playing</p>
-      <form id="pokedexDetails">
-        <label name="details">Enter a Pokemon ID from 1 to 150</label><br>
-        <input type="number"name ="details" min ="1" max="150" id="details"><br><br>
-        <input type="submit" id="learnMore" value ="Learn more">
-      </form>
-      <div id="showPokemon">
-        <div class="pname"></div>
-        <div class="images">
-          <img class="image">
-          <img class="image-2">
-        </div>
-        <div class="type"></div>
-      </div>
-      <p>Ready to play now? Choose your level!</p>
+      <div id ="pokedex">
+        <p>Brush up on your Pokemon knowledge before playing</p>
+        <form id="pokedexDetails">
+          <label name="details">Enter a Pokemon ID from 1 to 150</label><br>
+          <input type="number"name ="details" id="details"><br><br>
+          <input type="submit" id="learnMore" value ="Learn more">
+        </form>
+        <div id="showPokemon">
+          <div class="errorMsg">Please enter a number between 1 and 150</div>
+          <div class="pname"></div>
+          <div class= "container">
+            <div class="row id = "images">
+              <div class="col-sm-12 col-md-6">
+                <img class="image">
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <img class="image-2">
+              </div>
+            </div>
           </div>
-            <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
-      <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
-    </div>
+          <div class="type"></div>
+        </div>
+          <p>Ready to play now? Choose your level!</p>
+          <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
+          <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
+      </div>
     </div>
     <div id="main">
       <div class="pokemon-name"></div>
