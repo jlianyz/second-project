@@ -77,6 +77,7 @@ Basic checks include:
 * Making sure that the blacked-out image is showing when user selects the Hard option
 * Checking that the right sections get hidden/show when users reset the game
 * Checking that the score gets reset when users reset the game
+* When user enters answer in upper/lower case or mixture of both, it does not matter as long as the answer is correct
 * Doing a spell check to make sure there are no errors. 
 * Doing a console.log when pulling the Poke API to ensure that the connection is working
 
