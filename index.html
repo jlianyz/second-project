@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Guess the Pokemon</title>
+    <!--ultraball favicon-->
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Monoton&display=swap" rel="stylesheet">
+    <!--bootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,8 +21,8 @@
     <img class="logo" src="images/pokemon-logo.png">
     <br>
     <h1>Guess the pokemon</h1>
+    <!--section to learn more about pokemon-->
     <div id="starting">
-      <div id ="pokedex">
         <p>Brush up on your Pokemon knowledge before playing</p>
         <form id="pokedexDetails">
           <label name="details">Enter a Pokemon ID from 1 to 150</label><br>
@@ -27,9 +30,15 @@
           <input type="submit" id="learnMore" value ="Learn more">
         </form>
         <div id="showPokemon">
-          <div class="errorMsg">Please enter a number between 1 and 150</div>
+          <!--shows only when wrong poke ID is entered-->
+          <div class="errorMsg">
+            Please enter a number between 1 and 150
+          </div>
+          <div class="pokedex">
+          <!--pokemon name-->
           <div class="pname"></div>
           <div class= "container">
+            <!--shows front and back of pokemon-->
             <div class="row id = "images">
               <div class="col-sm-12 col-md-6">
                 <img class="image">
@@ -38,14 +47,19 @@
                 <img class="image-2">
               </div>
             </div>
-          </div>
+          <!--type of pokemon-->
           <div class="type"></div>
         </div>
+        </div>
+        </div><br>
           <p>Ready to play now? Choose your level!</p>
+          <!--easy button with short description-->
           <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
+          <!--hard button with short description-->
           <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
       </div>
     </div>
+    <!--section to guess the pokemon-->
     <div id="main">
       <div class="pokemon-name"></div>
       <img class="pokemon-image">
@@ -55,18 +69,23 @@
         <input type="text" name="userAns" id="userAns"><br>
         <input type="submit" id="submit">
         </form><br>
+        <!--adds 1 for each correct answer, resets to 0 on Play again-->
       <div class="score" id="score">Score:</div>
       <div id="result"></div>
       <button id="next">Skip</button>
+      <!--shows the learn more section again or change level-->
       <button id="reset">Play again</button>
     </div>
+    <!--animation next to logo-->
     <div id="bouncy">
       <img id="pikachu" class="bounce" src="images/pikachu.png">
       <img id="charmander" class="bounce" src="images/charmander.png">
       <img id="bulbasaur" class="bounce" src="images/bulbasaur.png">
       <img id="squirtle" class="bounce" src="images/squirtle.png">
     </div>
+    <!--axios-->   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <!--jquery-->
     <script src="scripts/jquery.js"></script>
     <script src="scripts/script.js"></script>
   </body>

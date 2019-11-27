@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/pokeball-bg.png");
+  background-image: url("../images/pokeball-bg.png"); /*with lower opacity*/
 }
 .logo {
   width: 200px;
@@ -32,7 +32,8 @@ body {
   display:none;
 }
 h1 {
-  background-color:white;
+  background-color:	#FFD700;
+  border:10px solid #0000CD;
   font-family:'Monoton', cursive;
   text-align:center;
   padding:10px 0;
@@ -76,13 +77,12 @@ div,p {
 #result {
   font-weight:bold;
 }
-/* Chrome, Safari, Edge, Opera */
+/* removes up down buttons for number input*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Firefox */
 input[type=number] {
   -moz-appearance:textfield;
 }
@@ -118,15 +118,15 @@ input[type=number] {
   height:50px;
   width: 45px;
 }
-@media only screen and (max-width: 600px) {
-  .bounce {
-    display:none;
-  }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .logo {
   width: 150px;
   }
   #showPokemon {
-    width:80%;
+    width:90%;
     font-weight:normal;
+  }
+  #bouncy {
+    display:none;
+  }
 }

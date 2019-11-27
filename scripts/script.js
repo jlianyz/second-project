@@ -74,9 +74,12 @@ function learn() {
     var pokeNo = $("#details").val();
     if(pokeNo < 1 || pokeNo > 150) { //user entered number outside range
       $("#showPokemon").show();
+      $(".pokedex").hide();
+      $(".errorMsg").show();
     }
     else {
       $("#showPokemon").show();
+      $(".pokedex").show();
       $(".errorMsg").hide();
       learn();
     }
@@ -93,7 +96,7 @@ $("#next").on('click', function(next) {
 $("#reset").on('click', function(e) {
   e.preventDefault();
   $("#main").hide();
-  $('#pokedex').show();
+  $('#starting').show();
   $(".levels").show();
   $(".pokemon-image").hide();
   $("#hint").hide();
@@ -112,7 +115,7 @@ document.getElementById("easy").addEventListener("click", function() {
   difficultyLevel = "easy";
   $("#main").show();
   getPokemonData();//pull api data
-  $('#pokedex').hide();
+  $('#starting').hide();
   $(".pokemon-image").css("filter", "");
   $(".levels").hide();//hide levels buttons
   $('#main').css("height","450px");//increase box size to accomodate pokemon image
@@ -124,7 +127,7 @@ document.getElementById("hard").addEventListener("click", function() {
   $("#main").show();
   $(".pokemon-image").css("filter", "brightness(0)");
   getPokemonData();//pull api data
-    $('#pokedex').hide();
+    $('#starting').hide();
   $(".levels").hide();//hide levels buttons
   $('#main').css("height","450px");//increase box size to 
 });
