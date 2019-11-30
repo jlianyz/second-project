@@ -125,6 +125,6 @@ input[type=number] {
     font-weight:normal;
   }
   #bouncy {
-    display:none;
+    display:none; /*hides animation on small screen */
   }
 }

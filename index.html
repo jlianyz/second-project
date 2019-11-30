@@ -23,40 +23,40 @@
     <h1>Guess the pokemon</h1>
     <!--section to learn more about pokemon-->
     <div id="starting">
-        <p>Brush up on your Pokemon knowledge before playing</p>
-        <form id="pokedexDetails">
-          <label name="details">Enter a Pokemon ID from 1 to 150</label><br>
-          <input type="number"name ="details" id="details"><br><br>
-          <input type="submit" id="learnMore" value ="Learn more">
-        </form>
-        <div id="showPokemon">
-          <!--shows only when wrong poke ID is entered-->
-          <div class="errorMsg">
-            Please enter a number between 1 and 150
-          </div>
-          <div class="pokedex">
-          <!--pokemon name-->
-          <div class="pname"></div>
-          <div class= "container">
-            <!--shows front and back of pokemon-->
-            <div class="row id = "images">
-              <div class="col-sm-12 col-md-6">
-                <img class="image">
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <img class="image-2">
-              </div>
+      <p>Brush up on your Pokemon knowledge before playing</p>
+      <form id="pokedexDetails">
+        <label name="details">Enter a Pokemon ID from 1 to 150</label><br>
+        <input type="number"name ="details" id="details"><br><br>
+        <input type="submit" id="learnMore" value ="Learn more">
+      </form>
+      <div id="showPokemon">
+      <!--shows only when wrong poke ID is entered-->
+        <div class="errorMsg">
+          Please enter a number between 1 and 150
+        </div>
+        <div class="pokedex">
+        <!--pokemon name-->
+        <div class="pname"></div>
+        <div class= "container">
+        <!--shows front and back of pokemon-->
+          <div class="row id = "images">
+            <div class="col-sm-12 col-md-6">
+              <img class="image">
             </div>
+            <div class="col-sm-12 col-md-6">
+              <img class="image-2">
+            </div>
+          </div>
           <!--type of pokemon-->
           <div class="type"></div>
         </div>
         </div>
         </div><br>
-          <p>Ready to play now? Choose your level!</p>
-          <!--easy button with short description-->
-          <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
-          <!--hard button with short description-->
-          <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
+        <p>Ready to play now? Choose your level!</p>
+        <!--easy button with short description-->
+        <button class="levels" data-toggle="tooltip" title="Guess the Pokemon from its image!" id="easy">Easy</button>
+        <!--hard button with short description-->
+        <button class="levels" data-toggle="tooltip"  title="Guess the Pokemon from its shadow!" id="hard">Hard</button>
       </div>
     </div>
     <!--section to guess the pokemon-->

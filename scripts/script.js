@@ -115,7 +115,7 @@ document.getElementById("easy").addEventListener("click", function() {
   difficultyLevel = "easy";
   $("#main").show();
   getPokemonData();//pull api data
-  $('#starting').hide();
+  $('#starting').hide();//hide learn more section
   $(".pokemon-image").css("filter", "");
   $(".levels").hide();//hide levels buttons
   $('#main').css("height","450px");//increase box size to accomodate pokemon image
@@ -125,11 +125,11 @@ document.getElementById("easy").addEventListener("click", function() {
 document.getElementById("hard").addEventListener("click", function() {
   difficultyLevel = "hard";
   $("#main").show();
-  $(".pokemon-image").css("filter", "brightness(0)");
-  getPokemonData();//pull api data
+  $(".pokemon-image").css("filter", "brightness(0)"); //make image black
+  getPokemonData();
     $('#starting').hide();
-  $(".levels").hide();//hide levels buttons
-  $('#main').css("height","450px");//increase box size to 
+  $(".levels").hide();
+  $('#main').css("height","450px"); 
 });
 
 //when user clicks submit
@@ -145,12 +145,12 @@ $("#answer").submit(function(e) {
       } else if (difficultyLevel == "easy") {
         $(".pokemon-image").css("filter", "");
       };
-    } else if(userAns.toLowerCase() === pokemonName.innerText) {
+    } else if(userAns.toLowerCase() === pokemonName.innerText) { //user inputs correct answer
       $("#result").html("congrats").show();
       counter += 1
       $("#score").html("score: " + counter);
       $("#result").css("color","green");
-      setTimeout(fade_out, 2000);
+      setTimeout(fade_out, 2000); //correct answer shows for 2 seconds
       function fade_out() {
         $("#result").fadeOut().empty();
         $("#userAns").val('');
@@ -161,7 +161,7 @@ $("#answer").submit(function(e) {
           $(".pokemon-image").css("filter", "");
         };
       }; 
-    } else if(userAns.toLowerCase() != pokemonName.innerText && userAns.length > 0) {
+    } else if(userAns.toLowerCase() != pokemonName.innerText && userAns.length > 0) { //user inputs wrong answer
       $(".pokemon-name").css("display","block");
       $("#result").html("The pokemon name is " + pokemonName.innerHTML).show();
       $("#result").css("color","blue")
@@ -169,8 +169,8 @@ $("#answer").submit(function(e) {
       function fade_out() {
         $("#result").fadeOut().empty();
         $("#userAns").val('');
-      getPokemonData();
-      if (difficultyLevel == "hard") {
+        getPokemonData();
+        if (difficultyLevel == "hard") {
         $(".pokemon-image").css("filter", "brightness(0)");
       } else if (difficultyLevel == "easy") {
         $(".pokemon-image").css("filter", "");
