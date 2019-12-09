@@ -33,7 +33,7 @@ The game has been designed to be easy to play on all forms of media (laptop, mob
 * Text has a white background overlay so that it is easy to read. 
 * The title is on a yellow background with dark blue border, similar to the Pokemon logo colors to create a consistent color scheme.
 * The sprites that are pulled from the pokeAPI are presented in a slightly larger than orginal size, so that it looks better against a large screen yet still has a good resolution
-* THe results text is slightly larger than the rest of the body to draw attention to it. In particular, when the user gets the answer correct, the "Congrats" message is in uppercase and blinking in rainbow color to draw attention to it.
+* The results text is slightly larger than the rest of the body to draw attention to it. In particular, when the user gets the answer correct, the "Congrats" message is in uppercase and blinking in rainbow color to draw attention to it.
 #### Desktop and tablet version
 * 4 of the more popular pokemon are bouncing near the logo to add some animations to the screen to generate user interest
 * The back and front Pokemon sprites are placed side by side so it looks more visually balanced

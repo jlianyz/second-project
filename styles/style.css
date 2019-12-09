@@ -74,7 +74,8 @@ div,p {
 #score {
   color:red;
 }
-@keyframes blinkingText{
+/*for congrats animation when correct answer is entered*/
+@keyframes blink {
     0%{     color: green;    }
     25%{    color: blue; }
     50%{    color: yellow; }

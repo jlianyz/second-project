@@ -147,7 +147,7 @@ $("#answer").submit(function(e) {
       };
     } else if(userAns.toLowerCase() === pokemonName.innerText) { //user inputs correct answer
       $("#result").html("congrats").show();
-      $("#result").css({"animation": "blinkingText 1s infinite", "text-transform": "uppercase"})
+      $("#result").css({"animation": "blink 1s infinite", "text-transform": "uppercase"})
       counter += 1
       $("#score").html("score: " + counter);
       $("#result").css("color","green");
