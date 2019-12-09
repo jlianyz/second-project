@@ -139,7 +139,7 @@ $("#answer").submit(function(e) {
     $(".pokemon-image").css("filter", "");
     if(userAns.length === 0) { //user left inpupt box blank
       $("#result").html("Please enter an answer").show();
-      $("#result").css("color","red");
+      $("#result").css({"color": "red", "animation": "none", "text-transform": "none"});
       if (difficultyLevel == "hard") {
         $(".pokemon-image").css("filter", "brightness(0)");
       } else if (difficultyLevel == "easy") {
@@ -147,6 +147,7 @@ $("#answer").submit(function(e) {
       };
     } else if(userAns.toLowerCase() === pokemonName.innerText) { //user inputs correct answer
       $("#result").html("congrats").show();
+      $("#result").css({"animation": "blinkingText 1s infinite", "text-transform": "uppercase"})
       counter += 1
       $("#score").html("score: " + counter);
       $("#result").css("color","green");
@@ -164,7 +165,7 @@ $("#answer").submit(function(e) {
     } else if(userAns.toLowerCase() != pokemonName.innerText && userAns.length > 0) { //user inputs wrong answer
       $(".pokemon-name").css("display","block");
       $("#result").html("The pokemon name is " + pokemonName.innerHTML).show();
-      $("#result").css("color","blue")
+      $("#result").css({"color": "blue", "animation": "none", "text-transform": "none"})
       setTimeout(fade_out, 2000);
       function fade_out() {
         $("#result").fadeOut().empty();

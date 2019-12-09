@@ -61,6 +61,9 @@
     </div>
     <!--section to guess the pokemon-->
     <div id="main">
+    <!--adds 1 for each correct answer, resets to 0 on Play again-->
+      <div class="score" id="score">Score:</div>
+      <div id="result"></div>
       <div class="pokemon-name"></div>
       <img class="pokemon-image">
       <p id="hint"></p>
@@ -69,9 +72,6 @@
         <input type="text" name="userAns" id="userAns"><br><br>
         <input type="submit" id="submit" value="Submit">
         </form><br>
-        <!--adds 1 for each correct answer, resets to 0 on Play again-->
-      <div class="score" id="score">Score:</div>
-      <div id="result"></div>
       <button id="next">Skip</button>
       <!--shows the learn more section again or change level-->
       <button id="reset">Play again</button>

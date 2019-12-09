@@ -71,9 +71,19 @@ div,p {
   width:150px;
   margin:0 auto;
 }
-
+#score {
+  color:red;
+}
+@keyframes blinkingText{
+    0%{     color: green;    }
+    25%{    color: blue; }
+    50%{    color: yellow; }
+    75%{    color: red;  }
+    100%{   color: green;    }
+}
 #result {
   font-weight:bold;
+  font-size:24px;
 }
 /* removes up down buttons for number input*/
 input::-webkit-outer-spin-button,
