@@ -31,6 +31,7 @@ The game has been designed to be easy to play on all forms of media (laptop, mob
 * Use of game-related fonts to create a playful feel
 * Only the relevant portions of the game show up as user plays. Eg, when user wants to learn more about pokemon, the Guessing portion is hidden. When users are playing the guessing game, the Learn More section is hidden.
 * Text has a white background overlay so that it is easy to read. 
+* A basic hint is included to guide users when guessing the Pokemon.
 * The title is on a yellow background with dark blue border, similar to the Pokemon logo colors to create a consistent color scheme.
 * The sprites that are pulled from the pokeAPI are presented in a slightly larger than orginal size, so that it looks better against a large screen yet still has a good resolution
 * The results text is slightly larger than the rest of the body to draw attention to it. In particular, when the user gets the answer correct, the "Congrats" message is in uppercase and blinking in rainbow color to draw attention to it.

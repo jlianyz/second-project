@@ -77,11 +77,11 @@ div,p {
 }
 /*for congrats animation when correct answer is entered*/
 @keyframes blink {
-    0%{     color: green;    }
-    25%{    color: blue; }
-    50%{    color: yellow; }
-    75%{    color: red;  }
-    100%{   color: green;    }
+    0%{color: green;}
+    25%{color: blue;}
+    50%{color: yellow;}
+    75%{color: red;}
+    100%{color: green;}
 }
 #result {
   font-weight:bold;

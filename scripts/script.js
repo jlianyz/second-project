@@ -52,10 +52,6 @@ function getPokemonData() {
     $(".pokemon-name").show();
     $(".pokemon-name").css("display", "none");
     $("#hint").show();           
-  })
-  .catch(function (error) {
-    pokemonName.innerHTML = "(An error has occurred.)";
-    pokemonImage.src = "";
   });
 }  
 
@@ -67,8 +63,9 @@ function learn() {
       image.src = response.data.sprites.front_default;
       backImage.src = response.data.sprites.back_default;
       type.innerHTML = "Type: " + response.data.types[0].type.name;
-});
-};
+  });
+}
+
  $("#learnMore").click(function(n) {
     n.preventDefault();
     var pokeNo = $("#details").val();
@@ -85,7 +82,6 @@ function learn() {
     }
  });
    
-
 //when user skips question
 $("#next").on('click', function(next) {
   getPokemonData();
@@ -108,7 +104,7 @@ function reset(){
   counter = 0;
   $("#details").val('')
         $("#score").html("score: " + counter);
-  }
+}
   
 //when user clicks on easy button
 document.getElementById("easy").addEventListener("click", function() {
